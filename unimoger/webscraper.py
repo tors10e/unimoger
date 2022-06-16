@@ -4,8 +4,9 @@ from bs4 import BeautifulSoup
 
 class WebScraper(object):
 
-    def __init__(self, url):
+    def __init__(self, url, city):
         self.url = url
+        self.city = city
         self.unimogs = {}
 
     def get_html_doc(self):
@@ -29,4 +30,4 @@ class WebScraper(object):
     def print_results(self):
         urls = self.get_urls_from_doc()
         for k,v in urls.items():
-            print('Title: {0} Url: {1}'.format(k, v))
+            print('City:{0} Title: {1} Url: {2}'.format(self.city, k, v))
