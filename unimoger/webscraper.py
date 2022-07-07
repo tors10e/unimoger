@@ -1,6 +1,6 @@
-from html.parser import HTMLParser
 import requests
 from bs4 import BeautifulSoup
+
 
 class WebScraper(object):
 
